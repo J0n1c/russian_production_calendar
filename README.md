@@ -1,8 +1,7 @@
 # RussianProductionCalendar
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/russian_production_calendar`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem checks holiday status of the given date.
+Holidays data is hardcoded into csv file. The format of the holidays file is corresponds to the official one from http://data.gov.ru
 
 ## Installation
 
@@ -22,8 +21,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+```ruby
+RussianProductionCalendar.is_holiday?(Date.parse('01.01.2018'))
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/russian_production_calendar.
+Bug reports and pull requests are welcome on GitHub at https://github.com/J0n1c/russian_production_calendar.
 
 ## License
 
