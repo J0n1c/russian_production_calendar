@@ -13,4 +13,12 @@ class RussianProductionCalendarTest < Minitest::Test
     assert !RussianProductionCalendar.is_holiday?(Date.parse('10.01.2018'))
   end
 
+  def test_first_working_day_is_not_holiday
+    assert !RussianProductionCalendar.is_holiday?(Date.parse('10.01.2018'))
+  end
+
+  def test_shortened_day_is_not_holiday
+    assert !RussianProductionCalendar.is_holiday?(Date.parse('22.02.2018'))
+  end
+
 end

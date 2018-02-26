@@ -15,6 +15,10 @@ module RussianProductionCalendar
 
   def is_holiday?(date)
     month = Russian.strftime(date, '%B')
-    csv_calendar.find { |record| record['Год/Месяц'] == date.year.to_s }[month].gsub('*', '').split(',').include?(date.day.to_s)
+    csv_calendar
+      .find { |record| record['Год/Месяц'] == date.year.to_s }[month]
+      .split(',')
+      .select{ |day| !day[/\*/] } # exclude shortened days
+      .include?(date.day.to_s)
   end
 end
