@@ -23,6 +23,9 @@ Or install it yourself as:
 
 ```ruby
 RussianProductionCalendar.is_holiday?(Date.parse('01.01.2018'))
+RussianProductionCalendar.is_workday?(Date.parse('01.01.2018'))
+RussianProductionCalendar.lte_business_day(Date.parse('01.01.2018'))
+RussianProductionCalendar.gte_business_day(Date.parse('01.01.2018'))
 ```
 ## Development
 
